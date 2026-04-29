@@ -1,0 +1,318 @@
+.main {
+  min-height: calc(100vh - 64px);
+  background: var(--color-bg);
+}
+
+/* ── Breadcrumb ─────────────────────────────────────── */
+.breadcrumbBar {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.breadcrumbInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+}
+
+.breadcrumbLink {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.breadcrumbLink:hover {
+  color: var(--accent, #1d4ed8);
+}
+
+.breadcrumbSep {
+  color: var(--color-text-muted);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ── Detail card ────────────────────────────────────── */
+.detailWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.detailCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* ── Image panel ────────────────────────────────────── */
+.imagePanel {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--accent-light, #dbeafe) 0%,
+    #f8fafc 100%
+  );
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.categoryPill {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--accent, #1d4ed8);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Info panel ─────────────────────────────────────── */
+.infoPanel {
+  padding: 40px 40px 40px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.itemName {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.itemCategory {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--accent-light, #dbeafe);
+  margin: 24px 0;
+}
+
+.specsTitle {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+/* ── Specs list ─────────────────────────────────────── */
+.specsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: 24px;
+}
+
+.specRow:last-child {
+  border-bottom: none;
+}
+
+.specLabel {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.specValue {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: right;
+  background: var(--accent-light, #dbeafe);
+  color: var(--accent, #1d4ed8);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* ── Actions ─────────────────────────────────────────── */
+.actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition),
+    background var(--transition);
+}
+
+.backBtn:hover {
+  border-color: var(--accent, #1d4ed8);
+  color: var(--accent, #1d4ed8);
+  background: var(--accent-light, #dbeafe);
+}
+
+.categoryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--accent, #1d4ed8);
+  border: 1.5px solid var(--accent, #1d4ed8);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.categoryBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ── Related ─────────────────────────────────────────── */
+.relatedSection {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 48px 0;
+}
+
+.relatedInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.relatedTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .detailCard {
+    grid-template-columns: 1fr;
+  }
+
+  .imagePanel {
+    min-height: 280px;
+  }
+
+  .imageFrame {
+    min-height: 280px;
+  }
+
+  .infoPanel {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .detailWrapper {
+    padding: 20px 16px;
+  }
+
+  .detailCard {
+    border-radius: var(--radius-md);
+  }
+
+  .infoPanel {
+    padding: 24px 20px;
+  }
+
+  .itemName {
+    font-size: 1.5rem;
+  }
+
+  .relatedSection {
+    padding: 32px 0;
+  }
+
+  .relatedGrid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .breadcrumbInner {
+    padding: 10px 16px;
+  }
+}
